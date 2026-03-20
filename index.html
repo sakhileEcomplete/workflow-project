@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="style.css" rel="stylesheet">
+
+
+</head>
+<body>
+  <!-- Task Manager App -->
+  <div class="container">
+    <header>
+
+      <h1>Get Things<br><span>Done.</span></h1>
+
+    </header>
+ 
+    <!-- Input Row -->
+    <div class="input-row">
+      <input type="text" id="nameInput" placeholder="Add a new task…">
+      <button class="btn-add" onclick="addTask()">+</button>
+    </div>
+ 
+    <!-- Filter Buttons -->
+    <div class="filters">
+      <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+      <button class="filter-btn" onclick="setFilter('active', this)">Active</button>
+      <button class="filter-btn" onclick="setFilter('done', this)">Done</button>
+    </div>
+ <select onchange="setFilter(this.value)">
+      <option value="all">All</option>
+      <option value="active">Active</option>
+      <option value="done">Done</option>
+    </select>
+
+
+    <!-- Task List -->
+    <div id="taskList"></div>
+  </div>
+ 
+  <script src="script.js"></script>
+  <script src="test.js"></script>
+  
+ 
+</body>
+</html>
